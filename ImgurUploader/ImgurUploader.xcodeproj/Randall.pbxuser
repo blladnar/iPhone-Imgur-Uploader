@@ -1,0 +1,69 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* ImgurUploader */ = {
+		activeExec = 0;
+		executables = (
+			70BC497B13197C7000F9017A /* ImgurUploader */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 70BC497B13197C7000F9017A /* ImgurUploader */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* ImgurUploader */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* ImgurUploader */,
+		);
+		codeSenseManager = 70BC498913197C8700F9017A /* Code sense */;
+		executables = (
+			70BC497B13197C7000F9017A /* ImgurUploader */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 320437360;
+			PBXWorkspaceStateSaveDate = 320437360;
+		};
+		sourceControlManager = 70BC498813197C8700F9017A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	70BC497B13197C7000F9017A /* ImgurUploader */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ImgurUploader;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	70BC498813197C8700F9017A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	70BC498913197C8700F9017A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
