@@ -24,7 +24,7 @@
 	
 	imageB64 = [imageB64 stringByEscapingValidURLCharacters];
 	
-	NSString *uploadCall = [NSString stringWithFormat:@"key=%@&image=%@",@"0b485b44778db48fa3632751a291464a",imageB64];
+	NSString *uploadCall = [NSString stringWithFormat:@"key=%@&image=%@",@"YOUR_API_KEY_HERE",imageB64];
 	
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://api.imgur.com/2/upload"]];
 	[request setHTTPMethod:@"POST"];
