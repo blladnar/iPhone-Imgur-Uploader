@@ -9,21 +9,25 @@
 @protocol ImgurUploaderDelegate
 
 -(void)imageUploadedWithURLString:(NSString*)urlString;
+-(void)uploadProgressedToPercentage:(CGFloat)percentage;
+-(void)uploadFailedWithError:(NSError*)error;
 
 @end
 
 
-@interface ImgurUploader : NSObject <NSXMLParserDelegate>
+@interface ImgurUploader : NSObject <NSXMLParserDelegate> 
 {
-	NSObject <ImgurUploaderDelegate> *delegate;
+	id<ImgurUploaderDelegate> delegate;
 	NSMutableData *receivedData;
 	NSString* imageURL;
 	NSString* currentNode;
+	
+	
 }
 
 -(void)uploadImage:(UIImage*)image;
 
-@property (assign) NSObject <ImgurUploaderDelegate> *delegate;
+@property (assign) id<ImgurUploaderDelegate> delegate;
 
 
 @end

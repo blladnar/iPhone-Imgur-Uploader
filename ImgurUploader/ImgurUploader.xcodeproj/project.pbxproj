@@ -18,6 +18,7 @@
 		70BC498713197C8700F9017A /* ImgurUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BC498613197C8700F9017A /* ImgurUploader.m */; };
 		70BC498C13197C9200F9017A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BC498A13197C9200F9017A /* NSData+Base64.m */; };
 		70BC498F13197C9D00F9017A /* NSString+URLEscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BC498E13197C9D00F9017A /* NSString+URLEscape.m */; };
+		70BC7000133811EC008A3292 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BC6FFE133811EC008A3292 /* NSString+URLEncoding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		70BC498B13197C9200F9017A /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		70BC498D13197C9D00F9017A /* NSString+URLEscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEscape.h"; sourceTree = "<group>"; };
 		70BC498E13197C9D00F9017A /* NSString+URLEscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEscape.m"; sourceTree = "<group>"; };
+		70BC6FFE133811EC008A3292 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		70BC6FFF133811EC008A3292 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ImgurUploader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ImgurUploader-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +62,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				70BC6FFE133811EC008A3292 /* NSString+URLEncoding.m */,
+				70BC6FFF133811EC008A3292 /* NSString+URLEncoding.h */,
 				70BC498D13197C9D00F9017A /* NSString+URLEscape.h */,
 				70BC498E13197C9D00F9017A /* NSString+URLEscape.m */,
 				70BC498A13197C9200F9017A /* NSData+Base64.m */,
@@ -189,6 +194,7 @@
 				70BC498713197C8700F9017A /* ImgurUploader.m in Sources */,
 				70BC498C13197C9200F9017A /* NSData+Base64.m in Sources */,
 				70BC498F13197C9D00F9017A /* NSString+URLEscape.m in Sources */,
+				70BC7000133811EC008A3292 /* NSString+URLEncoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

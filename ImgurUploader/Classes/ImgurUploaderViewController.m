@@ -44,6 +44,17 @@
 	urlField.text = urlString;
 }
 
+-(void)uploadFailedWithError:(NSError *)error
+{
+	
+}
+
+-(void)uploadProgressedToPercentage:(CGFloat)percentage
+{
+	progressView.hidden = !( percentage > 0.0 && percentage < 1.0 );
+	progressView.progress = percentage;
+}
+
 
 
 - (void)didReceiveMemoryWarning {

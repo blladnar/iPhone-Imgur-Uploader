@@ -14,6 +14,7 @@
 	ImgurUploader *uploader;
 	IBOutlet UIImagePickerController *imagePicker;
 	IBOutlet UITextField *urlField;
+	IBOutlet UIProgressView *progressView;
 }
 
 -(IBAction)showLibraryPicker:(id)sender;

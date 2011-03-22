@@ -7,9 +7,9 @@
 //
 
 #import "ImgurUploader.h"
-#import "NSString+URLEscape.h"
+#import "NSString+URLEncoding.h"
 #import "NSData+Base64.h"
-
+#import <dispatch/dispatch.h>
 
 @implementation ImgurUploader
 
@@ -17,30 +17,42 @@
 
 -(void)uploadImage:(UIImage*)image
 {
-	imageURL = [NSString string];
+	dispatch_queue_t queue = dispatch_queue_create("com.Blocks.task",NULL);
+	dispatch_queue_t main = dispatch_get_main_queue();
 	
-	NSData   *imageData  = UIImageJPEGRepresentation(image, 1.0);
-	NSString *imageB64   = [imageData base64EncodingWithLineLength:0];  
-	
-	imageB64 = [imageB64 stringByEscapingValidURLCharacters];
-	
-	NSString *uploadCall = [NSString stringWithFormat:@"key=%@&image=%@",@"YOUR_API_KEY_HERE",imageB64];
-	
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://api.imgur.com/2/upload"]];
-	[request setHTTPMethod:@"POST"];
-	[request setValue:[NSString stringWithFormat:@"%d",[uploadCall length]] forHTTPHeaderField:@"Content-length"];
-	[request setHTTPBody:[uploadCall dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-	if (theConnection) 
-	{
-		receivedData=[[NSMutableData data] retain];
-	} 
-	else 
-	{
-
-	}
+	dispatch_async(queue,^{
+		NSData   *imageData  = UIImageJPEGRepresentation(image, 0.3); // High compression due to 3G.
+		
+		NSString *imageB64   = [imageData base64EncodingWithLineLength:0];
+		imageB64 = [imageB64 encodedURLString];
+		
+		dispatch_async(main,^{
+			
+			NSString *uploadCall = [NSString stringWithFormat:@"key=%@&image=%@",YOUR_API_KEY_HERE,imageB64];
+			
+			NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://api.imgur.com/2/upload"]];
+			[request setHTTPMethod:@"POST"];
+			[request setValue:[NSString stringWithFormat:@"%d",[uploadCall length]] forHTTPHeaderField:@"Content-length"];
+			[request setHTTPBody:[uploadCall dataUsingEncoding:NSUTF8StringEncoding]];
+			
+			NSURLConnection *theConnection=[[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+			if (theConnection) 
+			{
+				// Create the NSMutableData that will hold
+				// the received data
+				// receivedData is declared as a method instance elsewhere
+				//receivedData=[[NSMutableData data] retain];
+				receivedData=[[NSMutableData data] retain];
+			} 
+			else 
+			{
+				
+			}
+			
+		});
+	});  		
 }
+
 
 -(void)dealloc
 {
@@ -50,7 +62,7 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-
+	[delegate uploadFailedWithError:error];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -58,10 +70,15 @@
 	[receivedData appendData:data];
 }
 
+- (void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
+{
+	[delegate uploadProgressedToPercentage:(CGFloat)totalBytesWritten/(CGFloat)totalBytesExpectedToWrite];
+}
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-	NSString *dataString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-	NSLog( @"%@", dataString );
+	//	NSString *dataString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+	//	NSLog( @"%@", dataString );
 	
 	NSXMLParser* parser = [[NSXMLParser alloc] initWithData:receivedData];
 	[parser setDelegate:self];
@@ -70,6 +87,8 @@
 
 -(void)parserDidEndDocument:(NSXMLParser*)parser
 {
+	//NSLog(@"Parse Finished");
+	//	NSLog(@"%@", thought);
 	[delegate imageUploadedWithURLString:imageURL];
 }
 

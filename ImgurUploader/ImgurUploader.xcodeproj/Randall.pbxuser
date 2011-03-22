@@ -6,6 +6,20 @@
 			70BC497B13197C7000F9017A /* ImgurUploader */,
 		);
 	};
+	28D7ACF60DDB3853001CB0EB /* ImgurUploaderViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {579, 325}}";
+			sepNavSelRange = "{403, 0}";
+			sepNavVisRange = "{58, 471}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* ImgurUploaderViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {908, 1027}}";
+			sepNavSelRange = "{1333, 0}";
+			sepNavVisRange = "{1127, 549}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 70BC497B13197C7000F9017A /* ImgurUploader */;
@@ -13,13 +27,44 @@
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ImgurUploader */,
 		);
+		breakpoints = (
+		);
 		codeSenseManager = 70BC498913197C8700F9017A /* Code sense */;
 		executables = (
 			70BC497B13197C7000F9017A /* ImgurUploader */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 320437360;
-			PBXWorkspaceStateSaveDate = 320437360;
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					730,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 322441510;
+			PBXWorkspaceStateSaveDate = 322441510;
+		};
+		perUserProjectItems = {
+			70BC700D133812DE008A3292 /* PBXTextBookmark */ = 70BC700D133812DE008A3292 /* PBXTextBookmark */;
+			70BC700E133812DE008A3292 /* PBXTextBookmark */ = 70BC700E133812DE008A3292 /* PBXTextBookmark */;
+			70BC702613381345008A3292 /* PBXTextBookmark */ = 70BC702613381345008A3292 /* PBXTextBookmark */;
+			70BC702713381345008A3292 /* PBXTextBookmark */ = 70BC702713381345008A3292 /* PBXTextBookmark */;
+			70BC70291338134D008A3292 /* PBXTextBookmark */ = 70BC70291338134D008A3292 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 70BC498813197C8700F9017A /* Source Control */;
 		userBuildSettings = {
@@ -32,7 +77,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -41,6 +86,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -48,9 +94,27 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = ImgurUploader;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
+	};
+	70BC498513197C8700F9017A /* ImgurUploader.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 442}}";
+			sepNavSelRange = "{527, 0}";
+			sepNavVisRange = "{352, 280}";
+		};
+	};
+	70BC498613197C8700F9017A /* ImgurUploader.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {537, 1586}}";
+			sepNavSelRange = "{179, 0}";
+			sepNavVisRange = "{0, 300}";
+		};
 	};
 	70BC498813197C8700F9017A /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -65,5 +129,55 @@
 	70BC498913197C8700F9017A /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	70BC700D133812DE008A3292 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 70BC498513197C8700F9017A /* ImgurUploader.h */;
+		name = "ImgurUploader.h: 24";
+		rLen = 0;
+		rLoc = 527;
+		rType = 0;
+		vrLen = 280;
+		vrLoc = 352;
+	};
+	70BC700E133812DE008A3292 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ImgurUploaderViewController.h */;
+		name = "ImgurUploaderViewController.h: 16";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 471;
+		vrLoc = 58;
+	};
+	70BC702613381345008A3292 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ImgurUploaderViewController.m */;
+		name = "ImgurUploaderViewController.m: 54";
+		rLen = 0;
+		rLoc = 1333;
+		rType = 0;
+		vrLen = 549;
+		vrLoc = 1127;
+	};
+	70BC702713381345008A3292 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 70BC498613197C8700F9017A /* ImgurUploader.m */;
+		name = "ImgurUploader.m: 9";
+		rLen = 0;
+		rLoc = 178;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 0;
+	};
+	70BC70291338134D008A3292 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 70BC498613197C8700F9017A /* ImgurUploader.m */;
+		name = "ImgurUploader.m: 31";
+		rLen = 0;
+		rLoc = 842;
+		rType = 0;
+		vrLen = 1274;
+		vrLoc = 323;
 	};
 }
